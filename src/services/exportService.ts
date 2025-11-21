@@ -220,12 +220,12 @@ export function printCode(code: string, options: ExportOptions = {}): void {
       }).join('\n');
     }
 
-    // Write HTML content
-    printWindow.document.write(`
+    // Create HTML content safely
+    const htmlContent = `
       <!DOCTYPE html>
       <html>
       <head>
-        <title>${title}</title>
+        <title>${escapeHtml(title)}</title>
         <style>
           @page {
             margin: 2cm;
@@ -272,12 +272,16 @@ export function printCode(code: string, options: ExportOptions = {}): void {
         </style>
       </head>
       <body>
-        <h1>${title}</h1>
+        <h1>${escapeHtml(title)}</h1>
         <p class="date">Generated on ${new Date().toLocaleDateString()}</p>
-        <pre>${codeContent}</pre>
+        <pre>${escapeHtml(codeContent)}</pre>
       </body>
       </html>
-    `);
+    `;
+
+    // Set content safely
+    printWindow.document.open();
+    printWindow.document.write(htmlContent);
 
     printWindow.document.close();
 
