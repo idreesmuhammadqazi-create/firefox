@@ -33,7 +33,6 @@
 
   "web_accessible_resources": [
     "dist/*",
-    "index.html",
     "icons/*"
   ]
 }
