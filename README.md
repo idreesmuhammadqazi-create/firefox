@@ -95,6 +95,18 @@ pseudorun-extension/
 - `storage`: For saving programs locally
 - `tabs`: For opening new tabs
 
+## Privacy & Data Collection
+
+This extension **does not collect or transmit any user data**:
+
+✅ **100% Offline Operation** - No network requests made
+✅ **Local Storage Only** - Programs saved in browser localStorage
+✅ **No Analytics** - No tracking or analytics data collected
+✅ **No Authentication** - No user accounts or personal data required
+✅ **No Telemetry** - No usage statistics or crash reports sent
+
+All user data remains on the user's device and is completely under their control.
+
 ## Development
 
 To modify the extension:
