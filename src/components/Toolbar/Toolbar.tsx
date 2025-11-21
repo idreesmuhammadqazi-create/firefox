@@ -44,8 +44,9 @@ export default function Toolbar({
   isRunning,
   examModeActive
 }: ToolbarProps) {
-  const { currentUser, logout, isGuestMode } = useAuth();
   const { theme, toggleTheme } = useTheme();
+  // Offline extension - always in guest mode
+  const isGuestMode = true;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [showExamplesMenu, setShowExamplesMenu] = useState(false);
   const examplesRef = useRef<HTMLDivElement>(null);
