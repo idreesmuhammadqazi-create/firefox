@@ -5,8 +5,6 @@
 
 import { useState, useEffect } from 'react';
 import { Program } from '../../types/program';
-import { getUserPrograms, deleteProgram, updateProgram, createProgram } from '../../services/programsService';
-import { useAuth } from '../../contexts/AuthContext';
 import styles from './ProgramsLibrary.module.css';
 
 interface ProgramsLibraryProps {
@@ -15,7 +13,6 @@ interface ProgramsLibraryProps {
 }
 
 export default function ProgramsLibrary({ onLoad, onClose }: ProgramsLibraryProps) {
-  const { currentUser } = useAuth();
   const [programs, setPrograms] = useState<Program[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
