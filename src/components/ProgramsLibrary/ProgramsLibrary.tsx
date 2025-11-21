@@ -51,8 +51,11 @@ export default function ProgramsLibrary({ onLoad, onClose }: ProgramsLibraryProp
     }
 
     try {
-      await deleteProgram(programId);
-      setPrograms(programs.filter(p => p.id !== programId));
+      // Delete from localStorage
+      const savedPrograms = JSON.parse(localStorage.getItem('savedPrograms') || '[]');
+      const updatedPrograms = savedPrograms.filter((p: Program) => p.id !== programId);
+      localStorage.setItem('savedPrograms', JSON.stringify(updatedPrograms));
+      setPrograms(updatedPrograms);
     } catch (err) {
       alert('Failed to delete program');
     }
