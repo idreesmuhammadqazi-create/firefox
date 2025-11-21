@@ -432,30 +432,7 @@ function App() {
     setShowProgramsLibrary(true);
   };
 
-  // Handle share code
-  const handleShare = async () => {
-    if (!currentUser?.emailVerified) {
-      alert('Please verify your email address to share code. Check your inbox for the verification link.');
-      return;
-    }
-    
-    if (!code.trim()) {
-      alert('Cannot share empty code');
-      return;
-    }
-
-    try {
-      const title = currentProgram?.name || 'Untitled Program';
-      const shareId = await shareCode(code, title);
-      const url = getShareURL(shareId);
-      setShareUrl(url);
-      setShowShareModal(true);
-    } catch (error) {
-      console.error('Error sharing code:', error);
-      alert('Failed to create share link. Please try again.');
-    }
-  };
-
+  
   // Handle export code
   const handleExport = () => {
     if (!code.trim()) {
