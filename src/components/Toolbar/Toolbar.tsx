@@ -69,23 +69,7 @@ export default function Toolbar({
     onLoadExample(code);
   };
 
-  const handleLogout = async () => {
-    // If in guest mode, clicking "Login" opens auth modal
-    if (isGuestMode) {
-      onOpenAuth();
-      return;
-    }
-    
-    // Otherwise, normal logout
-    if (confirm('Are you sure you want to logout?')) {
-      try {
-        await logout();
-      } catch (error) {
-        console.error('Logout error:', error);
-      }
-    }
-  };
-
+  
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
