@@ -93,7 +93,7 @@ pseudorun-extension/
 ## Permissions Used
 
 - `storage`: For saving programs locally
-- `activeTab`: For opening new tabs
+- `tabs`: For opening new tabs
 
 ## Development
 
