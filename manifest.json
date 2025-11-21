@@ -42,5 +42,9 @@
       "id": "pseudorun-offline@pseudorun.extension",
       "strict_min_version": "115.0"
     }
+  },
+
+  "data_collection": {
+    "uses_data_collection": false
   }
 }
