@@ -108,8 +108,8 @@ This extension **does not collect or transmit any user data**:
 All user data remains on the user's device and is completely under their control.
 
 ### Firefox Extension ID
-- **Temporary ID**: `pseudorun@example.com` (for development)
-- **Data Collection**: None - marked as non-privacy-sensitive
+- **Extension ID**: `pseudorun-offline@pseudorun.extension`
+- **Data Collection**: None - explicitly declared with `uses_data_collection: false`
 
 ## Development
 
