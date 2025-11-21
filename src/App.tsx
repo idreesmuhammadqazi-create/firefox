@@ -503,8 +503,7 @@ function App() {
         />
       )}
 
-      <EmailVerificationBanner />
-
+      
       <div className={styles.splitView}>
         <div className={styles.leftPanel}>
           <Editor value={code} onChange={handleCodeChange} />
