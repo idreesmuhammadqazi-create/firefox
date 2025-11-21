@@ -6,6 +6,15 @@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
+/**
+ * Escape HTML to prevent XSS attacks
+ */
+function escapeHtml(text: string): string {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
 export interface ExportOptions {
   title?: string;
   includeLineNumbers?: boolean;
