@@ -73,10 +73,13 @@ export default function ProgramsLibrary({ onLoad, onClose }: ProgramsLibraryProp
     }
 
     try {
-      await updateProgram(programId, { name: editingName.trim() });
-      setPrograms(programs.map(p =>
+      // Update in localStorage
+      const savedPrograms = JSON.parse(localStorage.getItem('savedPrograms') || '[]');
+      const updatedPrograms = savedPrograms.map((p: Program) =>
         p.id === programId ? { ...p, name: editingName.trim() } : p
-      ));
+      );
+      localStorage.setItem('savedPrograms', JSON.stringify(updatedPrograms));
+      setPrograms(updatedPrograms);
       setEditingId(null);
     } catch (err) {
       alert('Failed to rename program');
