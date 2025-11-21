@@ -1,25 +1,18 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Analytics } from '@vercel/analytics/react';
 import Editor from './components/Editor/Editor';
 import OutputPanel from './components/OutputPanel/OutputPanel';
 import ErrorDisplay, { ErrorMessage } from './components/ErrorDisplay/ErrorDisplay';
 import Toolbar from './components/Toolbar/Toolbar';
-import Landing from './components/Landing/Landing';
-import AuthModal from './components/Auth/AuthModal';
 import SaveAsModal from './components/SaveAsModal/SaveAsModal';
 import ProgramsLibrary from './components/ProgramsLibrary/ProgramsLibrary';
 import DebugControls from './components/DebugControls/DebugControls';
 import VariablesPanel from './components/VariablesPanel/VariablesPanel';
-import EmailVerificationBanner from './components/EmailVerificationBanner/EmailVerificationBanner';
-import { ShareModal } from './components/ShareModal/ShareModal';
 import { ExportModal } from './components/ExportModal/ExportModal';
 import Tutorial from './components/Tutorial/Tutorial';
 import SyntaxReference from './components/SyntaxReference/SyntaxReference';
 import PracticeProblems from './components/PracticeProblems/PracticeProblems';
 import ExamMode, { ExamModeStartModal } from './components/ExamMode/ExamMode';
 import LearningTools from './components/LearningTools/LearningTools';
-import SEOManager from './components/SEOManager/SEOManager';
-import { useSEO } from './hooks/useSEO';
 import { tokenize } from './interpreter/lexer';
 import { parse } from './interpreter/parser';
 import { Interpreter } from './interpreter/interpreter';
@@ -28,10 +21,7 @@ import { saveCode, loadCode, clearSavedCode } from './utils/storage';
 import { downloadCode, readFile } from './utils/fileHandler';
 import { debounce } from './utils/debounce';
 import { RuntimeError, DebugState } from './interpreter/types';
-import { useAuth } from './contexts/AuthContext';
 import { Program } from './types/program';
-import { createProgram, updateProgram } from './services/programsService';
-import { shareCode, getSharedCode, getShareURL } from './services/shareService';
 import styles from './App.module.css';
 
 function App() {
