@@ -32,6 +32,7 @@
   },
 
   "web_accessible_resources": [
+    "index.html",
     "dist/*",
     "icons/*"
   ]
