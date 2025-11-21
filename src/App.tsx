@@ -429,10 +429,6 @@ function App() {
 
   // Handle open programs library
   const handleOpenLibrary = () => {
-    if (!currentUser?.emailVerified) {
-      alert('Please verify your email address to access saved programs. Check your inbox for the verification link.');
-      return;
-    }
     setShowProgramsLibrary(true);
   };
 
