@@ -442,17 +442,7 @@ function App() {
     setShowExportModal(true);
   };
 
-  // Handle open auth modal from guest mode
-  const handleOpenAuth = () => {
-    setShowAuthModal(true);
-  };
-
-  // Handle close auth modal
-  const handleCloseAuth = () => {
-    setShowAuthModal(false);
-    setGuestMode(true);
-  };
-
+  
   // Learning features handlers
   const handleStartExam = (duration: number) => {
     setExamMode({ active: true, duration });
