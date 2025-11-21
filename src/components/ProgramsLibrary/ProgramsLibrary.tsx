@@ -26,14 +26,13 @@ export default function ProgramsLibrary({ onLoad, onClose }: ProgramsLibraryProp
   }, []);
 
   const loadPrograms = async () => {
-    if (!currentUser) return;
-
     setLoading(true);
     setError('');
 
     try {
-      const userPrograms = await getUserPrograms(currentUser.uid);
-      setPrograms(userPrograms);
+      // Load from localStorage for offline extension
+      const savedPrograms = JSON.parse(localStorage.getItem('savedPrograms') || '[]');
+      setPrograms(savedPrograms);
     } catch (err) {
       setError('Failed to load programs');
     } finally {
