@@ -160,8 +160,8 @@ export default function ProgramsLibrary({ onLoad, onClose }: ProgramsLibraryProp
                         {program.name}
                       </div>
                       <div className={styles.programDate}>
-                        Modified: {program.updatedAt.toLocaleDateString()} at{' '}
-                        {program.updatedAt.toLocaleTimeString()}
+                        Created: {new Date(program.createdAt || Date.now()).toLocaleDateString()} at{' '}
+                        {new Date(program.createdAt || Date.now()).toLocaleTimeString()}
                       </div>
                     </>
                   )}
