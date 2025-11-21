@@ -39,7 +39,8 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "pseudorun@example.com"
+      "id": "pseudorun-offline@pseudorun.extension",
+      "strict_min_version": "115.0"
     }
   }
 }
