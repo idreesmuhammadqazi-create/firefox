@@ -6,6 +6,6 @@ browser.runtime.onInstalled.addListener(() => {
 // Browser action click handler
 browser.browserAction.onClicked.addListener((tab) => {
   browser.tabs.create({
-    url: browser.runtime.getURL('index.html')
+    url: browser.runtime.getURL('dist/index.html')
   });
 });
