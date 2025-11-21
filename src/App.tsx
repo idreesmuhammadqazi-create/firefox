@@ -462,31 +462,7 @@ function App() {
     setCode(newCode);
   };
 
-  // Auto-save current program every 30 seconds
-  useEffect(() => {
-    if (!currentUser || !currentProgram || !currentProgram.id) return;
-    if (code === lastSavedCode) return; // No changes to save
-
-    const autoSaveInterval = setInterval(async () => {
-      if (code !== lastSavedCode) {
-        try {
-          await updateProgram(currentProgram.id, { code });
-          setLastSavedCode(code);
-          console.log('Auto-saved program');
-        } catch (error) {
-          console.error('Auto-save failed:', error);
-        }
-      }
-    }, 30000); // 30 seconds
-
-    return () => clearInterval(autoSaveInterval);
-  }, [currentUser, currentProgram, code, lastSavedCode]);
-
-  // Show landing page if not authenticated and not in guest mode
-  if (!currentUser && !isGuestMode) {
-    return <Landing />;
-  }
-
+  
   return (
     <div className={styles.container}>
       <SEOManager feature={getCurrentSEOFeature()} />
