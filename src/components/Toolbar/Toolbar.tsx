@@ -219,11 +219,8 @@ export default function Toolbar({
 
       <div className={styles.userSection}>
         <span className={styles.userName}>
-          {isGuestMode ? 'Guest' : (currentUser?.displayName || currentUser?.email)}
+          Guest (Offline Mode)
         </span>
-        <button className={styles.logoutButton} onClick={handleLogout}>
-          {isGuestMode ? 'Login' : 'Logout'}
-        </button>
       </div>
 
       <a
