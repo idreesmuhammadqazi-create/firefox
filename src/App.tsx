@@ -558,10 +558,7 @@ function App() {
         />
       )}
 
-      {showAuthModal && (
-        <AuthModal onClose={handleCloseAuth} />
-      )}
-
+      
       {showTutorial && (
         <Tutorial
           onClose={() => setShowTutorial(false)}
