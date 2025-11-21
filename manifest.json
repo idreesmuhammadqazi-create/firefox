@@ -1,23 +1,20 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "PseudoRun - IGCSE Pseudocode Editor",
   "version": "1.0.0",
   "description": "Offline IGCSE/A-LEVELS pseudocode editor and simulator for Computer Science students",
 
   "permissions": [
     "storage",
-    "activeTab"
-  ],
-
-  "host_permissions": [
-    "<all_urls>"
+    "tabs"
   ],
 
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
 
-  "action": {
+  "browser_action": {
     "default_title": "Open PseudoRun Editor",
     "default_icon": {
       "16": "icons/icon-16.svg",
@@ -35,9 +32,8 @@
   },
 
   "web_accessible_resources": [
-    {
-      "resources": ["dist/*", "index.html"],
-      "matches": ["<all_urls>"]
-    }
+    "dist/*",
+    "index.html",
+    "icons/*"
   ]
 }
