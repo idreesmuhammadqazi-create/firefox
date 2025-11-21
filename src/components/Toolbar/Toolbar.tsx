@@ -35,7 +35,7 @@ export default function Toolbar({
   onOpenLibrary,
   onShare,
   onExport,
-  onOpenAuth,
+  onOpenAuth: _onOpenAuth, // Prefix with underscore to mark as unused
   onOpenTutorial,
   onOpenSyntaxReference,
   onOpenPracticeProblems,
