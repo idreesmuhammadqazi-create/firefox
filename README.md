@@ -29,6 +29,14 @@ A Firefox extension that provides the complete PseudoRun IGCSE/A-LEVELS pseudoco
 
 3. **Follow Option 1** steps to install the built extension.
 
+### Option 1a: Install Directly from Source (Quickest)
+
+1. **Open Firefox** and go to `about:debugging` in the address bar
+2. **Click "This Firefox"** on the left sidebar
+3. **Click "Load Temporary Add-on"**
+4. **Navigate to** this directory and select `manifest.json`
+5. **Done!** The extension is now installed and ready to use
+
 ## How to Use
 
 1. **Click the PseudoRun icon** in the Firefox toolbar
@@ -85,7 +93,24 @@ pseudorun-extension/
 ## Permissions Used
 
 - `storage`: For saving programs locally
-- `activeTab`: For opening new tabs
+- `tabs`: For opening new tabs
+
+## Privacy & Data Collection
+
+This extension **does not collect or transmit any user data**:
+
+✅ **100% Offline Operation** - No network requests made
+✅ **Local Storage Only** - Programs saved in browser localStorage
+✅ **No Analytics** - No tracking or analytics data collected
+✅ **No Authentication** - No user accounts or personal data required
+✅ **No Telemetry** - No usage statistics or crash reports sent
+
+All user data remains on the user's device and is completely under their control.
+
+### Firefox Extension ID
+- **Extension ID**: `pseudorun-offline@pseudorun.extension`
+- **Data Collection**: None - uses Firefox's built-in consent with `required: ["none"]`
+- **Firefox Compatibility**: Version 115.0+ (supports built-in data consent)
 
 ## Development
 

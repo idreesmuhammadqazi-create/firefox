@@ -1,23 +1,20 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "PseudoRun - IGCSE Pseudocode Editor",
   "version": "1.0.0",
-  "description": "Offline IGCSE/A-LEVELS pseudocode editor and simulator for Computer Science students",
+  "description": "Complete IGCSE/A-LEVELS pseudocode editor and simulator that works 100% offline. Write, debug, and execute Cambridge pseudocode with real-time validation. Features 22 built-in examples, interactive tutorial, syntax reference, practice problems, and exam mode. Perfect for Computer Science students learning programming concepts without internet dependency.",
 
   "permissions": [
     "storage",
-    "activeTab"
-  ],
-
-  "host_permissions": [
-    "<all_urls>"
+    "tabs"
   ],
 
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
 
-  "action": {
+  "browser_action": {
     "default_title": "Open PseudoRun Editor",
     "default_icon": {
       "16": "icons/icon-16.svg",
@@ -35,9 +32,18 @@
   },
 
   "web_accessible_resources": [
-    {
-      "resources": ["dist/*", "index.html"],
-      "matches": ["<all_urls>"]
+    "index.html",
+    "dist/*",
+    "icons/*"
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pseudorun-offline@pseudorun.extension",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
-  ]
+  }
 }
