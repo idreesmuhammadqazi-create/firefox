@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
 import { EXAMPLES } from '../../constants/examples';
-import { useAuth } from '../../contexts/AuthContext';
 import { useTheme } from '../../contexts/ThemeContext';
 import styles from './Toolbar.module.css';
 
