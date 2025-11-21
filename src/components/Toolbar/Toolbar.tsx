@@ -196,21 +196,18 @@ export default function Toolbar({
         ⏱️ Exam Mode
       </button>
 
-      {!isGuestMode && currentUser?.emailVerified && (
-        <>
-          <button className={styles.secondaryButton} onClick={onSaveAs}>
-            💾 Save As
-          </button>
+      {/* Offline mode - show local save and library features */}
+      <button className={styles.secondaryButton} onClick={onSaveAs}>
+        💾 Save As
+      </button>
 
-          <button className={styles.secondaryButton} onClick={onShare}>
-            🔗 Share
-          </button>
+      <button className={styles.secondaryButton} onClick={onShare} disabled title="Share feature not available offline">
+        🔗 Share
+      </button>
 
-          <button className={styles.secondaryButton} onClick={onOpenLibrary}>
-            📂 My Programs
-          </button>
-        </>
-      )}
+      <button className={styles.secondaryButton} onClick={onOpenLibrary}>
+        📂 My Programs
+      </button>
 
       <button 
         className={styles.themeToggle}
