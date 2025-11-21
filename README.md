@@ -109,7 +109,8 @@ All user data remains on the user's device and is completely under their control
 
 ### Firefox Extension ID
 - **Extension ID**: `pseudorun-offline@pseudorun.extension`
-- **Data Collection**: None - explicitly declared with `uses_data_collection: false`
+- **Data Collection**: None - uses Firefox's built-in consent with `required: ["none"]`
+- **Firefox Compatibility**: Version 115.0+ (supports built-in data consent)
 
 ## Development
 
