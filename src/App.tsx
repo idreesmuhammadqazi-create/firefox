@@ -465,7 +465,6 @@ function App() {
   
   return (
     <div className={styles.container}>
-      <SEOManager feature={getCurrentSEOFeature()} />
       <Toolbar
         onRun={handleRun}
         onDebug={handleDebug}
@@ -475,9 +474,9 @@ function App() {
         onLoadExample={handleLoadExample}
         onSaveAs={() => setShowSaveAsModal(true)}
         onOpenLibrary={handleOpenLibrary}
-        onShare={handleShare}
+        onShare={() => {}} // Disabled for offline mode
         onExport={handleExport}
-        onOpenAuth={handleOpenAuth}
+        onOpenAuth={() => {}} // Disabled for offline mode
         onOpenTutorial={() => setShowTutorial(true)}
         onOpenSyntaxReference={() => setShowSyntaxReference(true)}
         onOpenPracticeProblems={() => setShowPracticeProblems(true)}
