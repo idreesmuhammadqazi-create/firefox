@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "PseudoRun - IGCSE Pseudocode Editor",
   "version": "1.0.0",
-  "description": "Offline IGCSE/A-LEVELS pseudocode editor and simulator for Computer Science students",
+  "description": "Complete IGCSE/A-LEVELS pseudocode editor and simulator that works 100% offline. Write, debug, and execute Cambridge pseudocode with real-time validation. Features 22 built-in examples, interactive tutorial, syntax reference, practice problems, and exam mode. Perfect for Computer Science students learning programming concepts without internet dependency.",
 
   "permissions": [
     "storage",
