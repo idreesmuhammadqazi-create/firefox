@@ -26,8 +26,6 @@ import styles from './App.module.css';
 
 function App() {
   // Always in guest mode for offline extension
-  const currentUser = null;
-  const isGuestMode = true;
   const [code, setCode] = useState('');
   const [output, setOutput] = useState<string[]>([]);
   const [errors, setErrors] = useState<ErrorMessage[]>([]);
