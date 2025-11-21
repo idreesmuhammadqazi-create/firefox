@@ -591,8 +591,7 @@ function App() {
         />
       )}
 
-      <Analytics />
-    </div>
+        </div>
   );
 }
 
