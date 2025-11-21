@@ -549,13 +549,7 @@ function App() {
         />
       )}
 
-      {showShareModal && (
-        <ShareModal
-          shareUrl={shareUrl}
-          onClose={() => setShowShareModal(false)}
-        />
-      )}
-
+      
       {showExportModal && (
         <ExportModal
           code={code}
