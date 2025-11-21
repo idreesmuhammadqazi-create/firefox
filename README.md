@@ -29,6 +29,14 @@ A Firefox extension that provides the complete PseudoRun IGCSE/A-LEVELS pseudoco
 
 3. **Follow Option 1** steps to install the built extension.
 
+### Option 1a: Install Directly from Source (Quickest)
+
+1. **Open Firefox** and go to `about:debugging` in the address bar
+2. **Click "This Firefox"** on the left sidebar
+3. **Click "Load Temporary Add-on"**
+4. **Navigate to** this directory and select `manifest.json`
+5. **Done!** The extension is now installed and ready to use
+
 ## How to Use
 
 1. **Click the PseudoRun icon** in the Firefox toolbar
