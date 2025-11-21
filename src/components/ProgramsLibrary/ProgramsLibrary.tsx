@@ -87,13 +87,17 @@ export default function ProgramsLibrary({ onLoad, onClose }: ProgramsLibraryProp
   };
 
   const handleDuplicate = async (program: Program) => {
-    if (!currentUser) return;
-
     try {
-      await createProgram(currentUser.uid, {
+      // Create duplicate in localStorage
+      const savedPrograms = JSON.parse(localStorage.getItem('savedPrograms') || '[]');
+      const duplicateProgram = {
+        id: Date.now().toString(),
         name: `${program.name} (Copy)`,
-        code: program.code
-      });
+        code: program.code,
+        createdAt: new Date().toISOString()
+      };
+      savedPrograms.push(duplicateProgram);
+      localStorage.setItem('savedPrograms', JSON.stringify(savedPrograms));
 
       // Reload programs to show the new one
       await loadPrograms();
