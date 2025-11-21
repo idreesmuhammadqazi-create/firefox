@@ -49,10 +49,7 @@ function App() {
   const [showProgramsLibrary, setShowProgramsLibrary] = useState(false);
   const [lastSavedCode, setLastSavedCode] = useState('');
 
-  // Share state
-  const [showShareModal, setShowShareModal] = useState(false);
-  const [shareUrl, setShareUrl] = useState('');
-
+  
   // Export state
   const [showExportModal, setShowExportModal] = useState(false);
 
