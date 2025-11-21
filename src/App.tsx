@@ -397,21 +397,20 @@ function App() {
     }
   };
 
-  // Handle save as (create new program)
+  // Handle save as (create new program) - Local storage only
   const handleSaveAs = async (name: string) => {
-    if (!currentUser) return;
-    
-    if (!currentUser.emailVerified) {
-      alert('Please verify your email address to save programs. Check your inbox for the verification link.');
-      return;
-    }
-
-    const programId = await createProgram(currentUser.uid, {
+    // Save to localStorage for offline extension
+    const savedPrograms = JSON.parse(localStorage.getItem('savedPrograms') || '[]');
+    const newProgram = {
+      id: Date.now().toString(),
       name,
-      code
-    });
+      code,
+      createdAt: new Date().toISOString()
+    };
+    savedPrograms.push(newProgram);
+    localStorage.setItem('savedPrograms', JSON.stringify(savedPrograms));
 
-    setCurrentProgram({ id: programId, name });
+    setCurrentProgram({ id: newProgram.id, name });
     setLastSavedCode(code);
   };
 
