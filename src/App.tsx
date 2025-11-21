@@ -60,9 +60,7 @@ function App() {
   const stepResolveRef = useRef<(() => void) | null>(null);
   const interpreterRef = useRef<Interpreter | null>(null);
 
-  // Guest mode auth modal state
-  const [showAuthModal, setShowAuthModal] = useState(false);
-
+  
   // Learning features state
   const [showTutorial, setShowTutorial] = useState(false);
   const [showSyntaxReference, setShowSyntaxReference] = useState(false);
