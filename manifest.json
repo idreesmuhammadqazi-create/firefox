@@ -40,9 +40,8 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "pseudorun@example.com",
-      "data_collection": {
-        "data_collection": false,
-        "data_collection_text": "This extension does not collect or transmit any user data. All functionality works entirely offline and user data is stored only locally in the browser."
+      "data_collection_permissions": {
+        "is_privacy_sensitive": false
       }
     }
   }
